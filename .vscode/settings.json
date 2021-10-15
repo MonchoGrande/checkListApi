@@ -7,9 +7,5 @@
   "files.insertFinalNewline": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
-  "files.exclude": {
-    "": true,
-    "**/.git": false
-  }
+  "prettier.trailingComma": "es5"
 }
