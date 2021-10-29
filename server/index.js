@@ -1,20 +1,25 @@
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
+const swaggerUI = require('swagger-ui-express');
 
 const logger = require('./config/logger');
 
 const api = require('./api/v1');
+const docs = require('./api/v1/docs')
 
 //Init app
 const app = express();
+
+//Documentation 
+app.use('/docs', swaggerUI.serve, swaggerUI.setup(docs))
 
 //setup cors
 app.use(
   cors({
     origin: '*',
     methods: ['GET', 'PUT', 'POST', 'DELETE'],
-    allowedHeaders:['Accept','Content-Type','Authorization']
+    allowedHeaders: ['Accept', 'Content-Type', 'Authorization'],
   })
 );
 app.use(
