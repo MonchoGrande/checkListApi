@@ -1,7 +1,7 @@
 const swaggerJSDoc = require('swagger-jsdoc');
 const merge = require('lodash/merge');
 
-const { swaggerDefinition } = require.main.requiere('./server/config/docs');
+const { swaggerDefinition } = require.main.require('./server/config/docs');
 
 //Override default definitions
 const localDefinition = {
